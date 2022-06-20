@@ -8,14 +8,19 @@
 import Foundation
 
 class PaymentManager{
-    var money = 1000
+    var money = 300
     
     
     
     
     func Buy(price:Int) -> Int{
-        self.money = self.money - price
-        print("\(self.money)円です")
-        return self.money
+        if (self.money < price){
+            return 000
+        }else{
+            self.money = self.money - price
+            
+            return self.money
+        }
+        
     }
 }

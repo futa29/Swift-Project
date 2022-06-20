@@ -12,42 +12,55 @@ class Drink{
     var price: Int = 0
     var waterstock: Int = 2
     var teastock: Int = 2
-    var coffestock: Int = 2
+    var coffeestock: Int = 2
     var pay = PaymentManager()
    
     
-    func buyDrink(name: String)-> (name:String,balance: Int){
+    func buyDrink(name: String)-> (name:String,balance: Int,stock:Int){
         self.name = name
-        print(self.name)
         switch self.name{
         case "水":
             self.price = 80
+            if (self.waterstock == 0){
+                return ("error",000,001)
+            }
             self.waterstock -= 1
-            print("水を買いました")
-            var balance = pay.Buy(price: self.price)
-            return (name,balance)
+            
+            let balance = pay.Buy(price: self.price)
+            let stock = self.waterstock
+            return (name,balance,stock)
+            
         case "お茶":
             self.price = 100
+            if (self.teastock == 0){
+                return ("error",000,001)
+            }
             self.teastock -= 1
-            print("お茶を買いました")
-            var balance = pay.Buy(price: self.price)
-            return (name,balance)
-        case "コーヒー":
+            let balance = pay.Buy(price: self.price)
+            let stock = self.teastock
+            return (name,balance,stock)
             
+            
+        case "コーヒー":
             self.price = 130
-            self.coffestock -= 1
-            print("コーヒーを買いました")
-            var balance = pay.Buy(price: self.price)
-            return (name,balance)
+            if (self.coffeestock == 0){
+                return ("error",000,001)
+            }
+            self.coffeestock -= 1
+            let balance = pay.Buy(price: self.price)
+            let stock = self.coffeestock
+            return (name,balance,stock)
+            
         default:
-            var balance = pay.Buy(price: self.price)
-            return (name,balance)
+            let balance = pay.Buy(price: self.price)
+            let stock = self.waterstock
+            return (name,balance,stock)
         }
         
     }
     
-    func processStock(){
-        
+    func processStock(stock: Int){
+       
         
     }
     

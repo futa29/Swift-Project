@@ -133,15 +133,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2H-BG-x8q">
+                                <rect key="frame" x="84" y="549" width="225" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="coffeeImage" destination="u05-Yo-Jkw" id="ya0-dN-BNH"/>
+                        <outlet property="coffeeStock" destination="SUG-qR-xcp" id="esP-V9-lbb"/>
+                        <outlet property="coffeebutton" destination="Gg2-QR-te4" id="ti9-5J-DTG"/>
+                        <outlet property="errorLabel" destination="r2H-BG-x8q" id="chQ-sA-CIb"/>
                         <outlet property="money" destination="c6A-Kq-ALY" id="WXT-Hj-tzu"/>
                         <outlet property="teaImage" destination="KqG-jV-xec" id="7I2-bc-1XG"/>
+                        <outlet property="teaStock" destination="3iv-Tw-Yc9" id="nXm-Lt-CVP"/>
+                        <outlet property="teabutton" destination="VIT-cv-rkv" id="h5G-dc-UBs"/>
                         <outlet property="waterImage" destination="Z1f-Yp-wlg" id="tnO-6r-gqx"/>
+                        <outlet property="waterStock" destination="5Ri-dH-Hri" id="YWG-Hu-JpJ"/>
+                        <outlet property="waterbutton" destination="PWp-J5-cmR" id="hqR-OO-DwK"/>
                         <segue destination="YZP-NH-Ogk" kind="presentation" identifier="next" id="Ive-Xh-Jd4"/>
                     </connections>
                 </viewController>
